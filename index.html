@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <head>
+            <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+            <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+            <link rel="stylesheet" href="css/style.css" />
+        </head>
+            <title>Blog</title>
+    </head>
+    <style>
+          .ui.inverted.segment, .ui.primary.inverted.segment {
+            background-color: #ffffff;
+            color: rgba(0, 0, 0, 0.9);
+            background-image: url(https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-size: cover;
+            background-attachment: fixed;
+        }  
+        .masthead.segment {
+            min-height: 700px;
+            padding: 1em 0em;
+        }
+    </style>
+    <body>
+    
+    <!-- Following Menu -->
+    <div class="ui large top fixed hidden menu">
+      <div class="ui container">
+        <a class="active item" href="index.html">Home</a>
+        <a class="item" href="createBlog.html">Crear Post</a>
+      </div>
+    </div>
+    
+    <!-- Sidebar Menu -->
+    <div class="ui vertical inverted sidebar menu">
+      <a class="active item" href="index.html">Home</a>
+      <a class="item" href="createBlog.html">Crear Post</a>
+    </div>
+    
+    
+    <!-- Page Contents -->
+    <div class="pusher">
+      <div class="ui inverted vertical masthead center aligned segment">
+    
+        <div class="ui container">
+          <div class="ui large secondary inverted pointing menu">
+            <a class="toc item">
+              <i class="sidebar icon"></i>
+            </a>
+            <a class="active item" href="index.html">Home</a>
+            <a class="item" href="createBlog.html">Crear Post</a>
+          </div>
+        </div>
+    
+        <div class="ui text container text-header">
+          <h1 class="ui inverted header">
+            Blog Django
+          </h1>
+          <h2 class="">¿Quieres crear un post que sea leídos por todos?</h2>
+          <a href="createBlog.html"><div class="ui huge primary button">Crea Un Post <i class="right arrow icon"></i></div></a>
+          <h3 style="padding-bottom: 10px;" class="">Baja para leer las publicaciones de otros usuarios <i class="down arrow icon"></i></h3>
+        </div>
+    
+      </div>
+    
+      <!--Body Blog-->
+    
+      <div class="ui vertical stripe segment">
+        <div class="ui text container">
+          <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
+          <img class="ui fluid image" src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+          <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
+          
+        </div>
+        <h4 class="ui horizontal header divider">
+            <a href="#">Django Blog</a>
+          </h4>
+      </div>
+      <div class="ui vertical stripe segment">
+        <div class="ui text container">
+          <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
+          <img class="ui fluid image" src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+          <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
+          
+        </div>
+        <h4 class="ui horizontal header divider">
+            <a href="#">Django Blog</a>
+          </h4>
+      </div>
+    
+    <!--Footer-->
+      <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+          <div class="footer ui stackable inverted divided equal height stackable grid">
+            <div class="three wide column">
+              <h4 class="ui inverted header">About</h4>
+              <div class="ui inverted link list">
+                  <a href="#" class="item">Práctica de Django </a>
+                  <a href="#" class="item">Práctica de Django </a>
+              </div>
+            </div>
+            <div class="three wide column">
+              <h4 class="ui inverted header">Services</h4>
+              <div class="ui inverted link list">
+                <a href="#" class="item">Práctica de Django </a>
+                <a href="#" class="item">Práctica de Django </a>
+              </div>
+            </div>
+            <div class="seven wide column">
+              <h4 class="ui inverted header">Footer Header</h4>
+              <p>Ejercicio de practica con Django</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/library/jquery.min.js"></script>
+    <script src="./dist/components/visibility.js"></script>
+    <script src="./dist/components/sidebar.js"></script>
+    <script src="./dist/components/transition.js"></script>
+    <script>
+    $(document)
+      .ready(function() {
+  
+        // fix menu when passed
+        $('.masthead')
+          .visibility({
+            once: false,
+            onBottomPassed: function() {
+              $('.fixed.menu').transition('fade in');
+            },
+            onBottomPassedReverse: function() {
+              $('.fixed.menu').transition('fade out');
+            }
+          })
+        ;
+  
+        // create sidebar and attach to menu open
+        $('.ui.sidebar')
+          .sidebar('attach events', '.toc.item')
+        ;
+  
+      })
+    ;
+    </script>
+    </body>
+</html>
